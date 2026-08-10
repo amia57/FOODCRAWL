@@ -1,0 +1,160 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #9a2a2a;
+  box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #8b0000;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Segoe UI';
+}
+
+.nav-links {
+    margin-left: auto;
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 0.5rem 0.75rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 7px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: white;
+  background-color: #986868;
+}
+
+
+/* PROFILE */
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+
+  padding: 60px 20px;
+}
+
+.profile-card {
+  background-color: #8b0000;
+
+  width: 400px;
+
+  padding: 40px;
+
+  border-radius: 15px;
+
+  text-align: center;
+}
+
+
+/* PROFILE PICTURE */
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  background-color: #986868;
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 4px solid white;
+}
+
+#defaultProfile {
+  font-size: 70px;
+}
+
+#profileImage {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: none;
+}
+
+
+/* USERNAME */
+
+#profileUsername {
+  font-family: "Segoe UI";
+  color: white;
+
+  margin-bottom: 30px;
+}
+
+
+/* BUTTONS */
+
+.profile-card button {
+  width: 100%;
+
+  padding: 14px;
+
+  margin-top: 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+#changePicture {
+  background-color: #986868;
+  color: white;
+}
+
+#changePicture:hover {
+  background-color: #b47d7d;
+}
+
+#logoutButton {
+  background-color: white;
+  color: #8b0000;
+}
+
+#logoutButton:hover {
+  background-color: #e1b7c9;
+}
