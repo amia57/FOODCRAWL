@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@2.3.2/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5.sound@0.4.1/dist/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <main>
+      
+      <nav class="navbar">
+        <div class="nav-container">
+            <a class="nav-logo">#FOODCRAWL</a>
+            <ul class="nav-links">
+                <li><a href="#" class="active">HOME</a></li>
+                <li><a href="#">MAP</a></li>
+                <li><a href="#">LIST</a></li>
+                <li><a href="#">FAVORITES</a></li>
+                <li><a href="#" class="sign">SIGN UP</a></li> 
+                <li><a href="#" class="login">LOG IN</a></li>
+            </ul>
+        </div>
+    </nav>
+      
+      <br><br>
+      
+  <h1>SIGN UP</h1>    
+<div>
+       <form class="content" id="signupForm">
+          <label>Name</label> 
+         <input id="name" type="text" placeholder="Insert name" required> 
+         <label>Email</label>
+            <input id="email" type="email" placeholder="Insert email" required>
+         <label>Username</label>
+         <input id="username" type="text" placeholder="Insert username" required>
+         <label>Password</label>
+         <input id="password" type="password" placeholder="Insert password" required>
+       <button type="submit">Create Account</button>
+
+<p id="message"></p>
+       </form>
+</div>
+      <p class="state"> Already have an account?<a href="loginTCB.html">Log In</a></p>
+    </main>
+    <script src="sign.js"></script>
+  </body>
+</html>
