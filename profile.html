@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FOODCRAWL Profile</title>
+
+  <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <a class="nav-logo">#FOODCRAWL</a>
+
+      <ul class="nav-links">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">MAP</a></li>
+        <li><a href="#">LIST</a></li>
+        <li><a href="#">FAVORITES</a></li>
+        <li><a href="#">SIGN UP</a></li>
+        <li><a href="#">LOG IN</a></li>
+        <li><a href="#" class="active">PROFILE</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <main class="profile-container">
+
+    <div class="profile-card">
+
+      <div class="profile-picture">
+
+        <div id="defaultProfile">ythrterwefgryhrte rhgrtefgd hrtgef</div>
+
+        <img
+          id="profileImage"
+          alt="Profile Picture"
+        >
+
+      </div>
+
+      <h1 id="profileUsername">Username</h1>
+
+
+      <input
+        type="file"
+        id="pictureInput"
+        accept="image/*"
+        hidden
+      >
+
+
+      <button id="changePicture">
+        Change Profile Picture
+      </button>
+
+      <button id="logoutButton">
+        Log Out
+      </button>
+
+    </div>
+
+  </main>
+
+
+  <script src="profile.js"></script>
+
+</body>
+
+</html>
