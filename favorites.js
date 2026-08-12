@@ -57,7 +57,7 @@ let noFavoritesMessage =
     document.createElement("p");
 
 noFavoritesMessage.innerHTML =
-    "You haven't added any favorites yet!";
+"Add some of your favorite restaurants!"
 
 noFavoritesMessage.classList.add(
     "no-favorites"

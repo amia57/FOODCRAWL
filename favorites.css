@@ -76,7 +76,7 @@ body{
     text-decoration: none;
 
     font-family: "Segoe UI", Arial, sans-serif !important;
-    font-size: 1.05rem !important;
+    font-size: 1.5rem !important;
     font-weight: 500 !important;
 
     line-height: 1 !important;
@@ -111,7 +111,7 @@ body{
 .nav-links .sign,
 .nav-links .profile {
     font-family: "Segoe UI", Arial, sans-serif !important;
-    font-size: 1.05rem !important;
+    font-size: 1.5rem !important;
     font-weight: 500 !important;
 }
 
@@ -292,11 +292,14 @@ html {
   border-radius: 8px;
 
   padding: 14px;
-
   font-size: 17px;
   font-weight: bold;
 
   cursor: pointer;
+
+  width: 103.25%;
+  margin-left: 0%;
+  box-sizing: border-box;
 }
 
 #addFavoriteButton:hover {
