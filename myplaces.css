@@ -1,0 +1,398 @@
+/* ==========================================
+   PAGE
+   ========================================== */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #9a2a2a;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+
+
+/* ==========================================
+   NAVBAR
+   ========================================== */
+
+.navbar {
+  background-color: #8b0000;
+  color: white;
+
+  width: 100%;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
+}
+
+
+.nav-container {
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  padding: 18px 32px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+
+.nav-logo {
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 2.3rem;
+
+  font-weight: 800;
+
+  font-style: italic;
+
+  white-space: nowrap;
+}
+
+
+.nav-links {
+  list-style: none;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+
+.nav-links a {
+  display: block;
+
+  color: #dddddd;
+
+  text-decoration: none;
+
+  font-size: 1.05rem;
+
+  font-weight: 500;
+
+  padding: 12px 14px;
+
+  border-radius: 8px;
+
+  white-space: nowrap;
+
+  transition: 0.2s;
+}
+
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: white;
+
+  background-color: #986868;
+}
+
+
+/* ==========================================
+   MAIN PAGE
+   ========================================== */
+
+.myplaces-page {
+  width: 90%;
+
+  max-width: 900px;
+
+  margin: 50px auto;
+}
+
+
+/* ==========================================
+   ADD PLACE CARD
+   ========================================== */
+
+.myplaces-card {
+  background-color: #8b0000;
+
+  padding: 40px;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 10px 30px
+    rgba(0, 0, 0, 0.2);
+}
+
+
+.myplaces-card h1 {
+  color: white;
+
+  text-align: center;
+
+  font-size: 2.5rem;
+
+  margin-top: 0;
+
+  margin-bottom: 8px;
+}
+
+
+.subtitle {
+  color: #f3dada;
+
+  text-align: center;
+
+  margin-bottom: 32px;
+}
+
+
+/* ==========================================
+   FORM
+   ========================================== */
+
+#placeForm {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+#placeForm label {
+  color: white;
+
+  font-size: 1rem;
+
+  font-weight: bold;
+
+  margin-top: 5px;
+}
+
+
+#placeForm input,
+#placeForm select,
+#placeForm textarea {
+  box-sizing: border-box;
+
+  width: 100%;
+
+  padding: 14px 16px;
+
+  background-color: white;
+
+  border: 2px solid transparent;
+
+  border-radius: 12px;
+
+  outline: none;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 1rem;
+
+  transition: 0.2s;
+}
+
+
+#placeForm input:focus,
+#placeForm select:focus,
+#placeForm textarea:focus {
+  border-color: #d7a0a0;
+}
+
+
+#placeForm textarea {
+  min-height: 120px;
+
+  resize: vertical;
+}
+
+
+#placeForm button {
+  margin-top: 12px;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background-color: #a77373;
+
+  color: white;
+
+  font-size: 1.1rem;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+#placeForm button:hover {
+  background-color: #b98787;
+
+  transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   SAVED PLACES
+   ========================================== */
+
+.saved-section {
+  margin-top: 45px;
+}
+
+
+.saved-section h2 {
+  color: white;
+
+  font-size: 2rem;
+}
+
+
+#emptyPlaces {
+  color: white;
+
+  font-size: 1.1rem;
+}
+
+
+#placesList {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(260px, 1fr)
+    );
+
+  gap: 20px;
+}
+
+
+/* ==========================================
+   PLACE CARD
+   ========================================== */
+
+.place-card {
+  background-color: white;
+
+  padding: 22px;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 6px 18px
+    rgba(0, 0, 0, 0.18);
+}
+
+
+.place-card h3 {
+  margin-top: 0;
+
+  color: #8b0000;
+
+  font-size: 1.35rem;
+}
+
+
+.place-category {
+  font-weight: bold;
+
+  color: #986868;
+}
+
+
+.place-address {
+  color: #555;
+}
+
+
+.place-description {
+  line-height: 1.5;
+}
+
+
+/* ==========================================
+   LINKS
+   ========================================== */
+
+.place-card a {
+  color: #8b0000;
+
+  font-weight: bold;
+
+  text-decoration: none;
+}
+
+
+.place-card a:hover {
+  text-decoration: underline;
+}
+
+
+/* ==========================================
+   CARD BUTTONS
+   ========================================== */
+
+.place-buttons {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+
+.place-buttons button {
+  flex: 1;
+
+  padding: 10px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+.favorite-place {
+  background-color: #a77373;
+
+  color: white;
+}
+
+
+.delete-place {
+  background-color: #eeeeee;
+
+  color: #8b0000;
+}
