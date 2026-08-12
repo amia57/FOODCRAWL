@@ -1,218 +1,457 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   background-color: #9a2a2a;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 
+/* ==========================================
+   NAVBAR
+   ========================================== */
 
 .navbar {
-    background-color: #8b0000;
-    color: white;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background-color: #8b0000;
+  color: white;
+  width: 100%;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
 }
 
 .nav-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 18px 32px;
+  max-width: 1300px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  margin: 0 auto;
 
-    box-sizing: border-box;
+  padding: 18px 32px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-sizing: border-box;
 }
-
 
 .nav-logo {
-    color: white;
-    text-decoration: none;
+  color: white;
 
-    font-family: "Segoe UI", Arial, sans-serif;
-    font-size: 2.3rem;
-    font-weight: 800;
-    font-style: italic;
+  text-decoration: none;
 
-    white-space: nowrap;
+  font-family: "Segoe UI", Arial, sans-serif;
+
+  font-size: 2.3rem;
+
+  font-weight: 800;
+
+  font-style: italic;
+
+  white-space: nowrap;
 }
-
 
 .nav-links {
-    list-style: none;
+  list-style: none;
 
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
 
-    margin: 0;
-    padding: 0;
+  align-items: center;
 
-    font-family: "Segoe UI", Arial, sans-serif;
+  gap: 12px;
+
+  margin: 0;
+
+  padding: 0;
+
+  font-family: "Segoe UI", Arial, sans-serif;
 }
-
-
 
 .nav-links li {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
-
 
 .nav-links a {
-    display: block;
+  display: block;
 
-    color: #dddddd;
-    text-decoration: none;
+  color: #dddddd;
 
-    font-family: "Segoe UI", Arial, sans-serif !important;
-    font-size: 1.05rem !important;
-    font-weight: 500 !important;
+  text-decoration: none;
 
-    line-height: 1 !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
 
-    padding: 12px 14px;
+  font-size: 1.05rem !important;
 
-    border-radius: 8px;
+  font-weight: 500 !important;
 
-    white-space: nowrap;
+  line-height: 1 !important;
 
-    transition:
-        background-color 0.2s ease,
-        color 0.2s ease;
+  padding: 12px 14px;
+
+  border-radius: 8px;
+
+  white-space: nowrap;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
-
-
 
 .nav-links a:hover {
-    color: white;
-    background-color: #986868;
+  color: white;
+
+  background-color: #986868;
 }
-
-
 
 .nav-links a.map {
-    color: white;
-    background-color: #986868;
-}
+  color: white;
 
+  background-color: #986868;
+}
 
 .nav-links .login,
 .nav-links .sign,
 .nav-links .profile {
-    font-family: "Segoe UI", Arial, sans-serif !important;
-    font-size: 1.05rem !important;
-    font-weight: 500 !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+
+  font-size: 1.05rem !important;
+
+  font-weight: 500 !important;
 }
 
 .login {
   font-weight: bold;
+
   border-radius: 5rem;
 }
 
-.nav-links a:hover,
-.nav-links a.map {
-    color: #ffffff;
-    background-color: #986868;
+
+/* ==========================================
+   MAP
+   ========================================== */
+
+#map {
+  width: 100%;
+
+  height: 85vh;
+
+  box-sizing: border-box;
 }
-/* =========================
+
+
+/* ==========================================
    FOODCRAWL MAP FILTER
-   ========================= */
+   ========================================== */
 
 .leaflet-control-layers.leaflet-control {
-    background-color: #8b0000 !important;
-    border: none !important;
-    border-radius: 14px !important;
+  background-color: #8b0000 !important;
 
-    padding: 12px 14px !important;
+  border: none !important;
 
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.28) !important;
+  border-radius: 14px !important;
 
-    font-family: "Segoe UI", sans-serif !important;
+  padding: 12px 14px !important;
 
-    max-width: 270px;
+  box-shadow:
+    0 5px 18px
+    rgba(0, 0, 0, 0.28) !important;
+
+  font-family:
+    "Segoe UI",
+    sans-serif !important;
+
+  max-width: 270px;
 }
 
 
 /* inside of filter */
-.leaflet-control-layers-expanded {
-    background-color: #8b0000 !important;
-    color: white !important;
 
-    padding: 10px !important;
+.leaflet-control-layers-expanded {
+  background-color: #8b0000 !important;
+
+  color: white !important;
+
+  padding: 10px !important;
 }
 
 
 /* every food category */
+
 .leaflet-control-layers-overlays label {
-    display: block;
+  display: block;
 
-    color: white !important;
+  color: white !important;
 
-    padding: 7px 9px;
-    margin: 2px 0;
+  padding: 7px 9px;
 
-    border-radius: 8px;
+  margin: 2px 0;
 
-    font-size: 15px;
+  border-radius: 8px;
 
-    cursor: pointer;
+  font-size: 15px;
 
-    transition: 0.2s;
+  cursor: pointer;
+
+  transition: 0.2s;
 }
 
 
 /* hover */
+
 .leaflet-control-layers-overlays label:hover {
-    background-color: #986868;
+  background-color: #986868;
 }
 
 
-/* THE ACTUAL TEXT */
+/* actual text */
+
 .leaflet-control-layers-overlays label span {
-    color: white !important;
+  color: white !important;
 }
 
 
 /* checkbox */
+
 .leaflet-control-layers-overlays input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
+  width: 16px;
 
-    margin-right: 8px;
+  height: 16px;
 
-    accent-color: #ffb3b3;
+  margin-right: 8px;
 
-    cursor: pointer;
+  accent-color: #ffb3b3;
+
+  cursor: pointer;
 }
 
 
-/* little divider Leaflet sometimes adds */
+/* divider */
+
 .leaflet-control-layers-separator {
-    border-top: 1px solid rgba(255, 255, 255, 0.25) !important;
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.25) !important;
 }
 
 
 /* scroll if needed */
+
 .leaflet-control-layers-list {
-    max-height: 360px;
-    overflow-y: auto;
+  max-height: 360px;
+
+  overflow-y: auto;
 }
 
 
 /* scrollbar */
+
 .leaflet-control-layers-list::-webkit-scrollbar {
-    width: 6px;
+  width: 6px;
 }
 
 .leaflet-control-layers-list::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 10px;
+  background-color:
+    rgba(255, 255, 255, 0.4);
+
+  border-radius: 10px;
+}
+
+
+/* ==========================================
+   POPUPS
+   ========================================== */
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+
+  font-family:
+    "Segoe UI",
+    sans-serif;
+
+  box-shadow:
+    0 5px 16px
+    rgba(0, 0, 0, 0.25);
+}
+
+.leaflet-popup-content {
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+.leaflet-popup-content b {
+  color: #8b0000;
+
+  font-size: 16px;
+}
+
+
+/* ==========================================
+   ZOOM BUTTONS
+   ========================================== */
+
+.leaflet-control-zoom {
+  border: none !important;
+
+  border-radius: 10px !important;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 4px 12px
+    rgba(0, 0, 0, 0.2);
+}
+
+.leaflet-control-zoom a {
+  background-color: #8b0000 !important;
+
+  color: white !important;
+
+  border: none !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: #986868 !important;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+
+  /* NAVBAR */
+
+  .nav-container {
+    padding: 12px 10px;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+  .nav-logo {
+    font-size: 1.8rem;
+
+    margin-bottom: 8px;
+  }
+
+  .nav-links {
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 4px;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem !important;
+
+    padding: 6px 7px !important;
+
+    white-space: nowrap;
+  }
+
+
+  /* MAP */
+
+  #map {
+    width: 100% !important;
+
+    height: 75vh !important;
+
+    box-sizing: border-box;
+  }
+
+
+  /* FILTER */
+
+  .leaflet-control-layers.leaflet-control {
+    max-width: 185px !important;
+
+    padding: 7px 8px !important;
+
+    border-radius: 10px !important;
+  }
+
+  .leaflet-control-layers-expanded {
+    padding: 6px !important;
+  }
+
+  .leaflet-control-layers-overlays label {
+    font-size: 11px !important;
+
+    padding: 4px 5px !important;
+
+    margin: 1px 0 !important;
+
+    line-height: 1.2;
+  }
+
+  .leaflet-control-layers-overlays input[type="checkbox"] {
+    width: 13px;
+
+    height: 13px;
+
+    margin-right: 4px;
+  }
+
+  .leaflet-control-layers-list {
+    max-height: 260px;
+  }
+
+
+  /* ZOOM */
+
+  .leaflet-control-zoom a {
+    width: 28px !important;
+
+    height: 28px !important;
+
+    line-height: 28px !important;
+
+    font-size: 18px !important;
+  }
+
+
+  /* POPUPS */
+
+  .leaflet-popup-content {
+    font-size: 12px !important;
+
+    max-width: 180px;
+  }
+
+  .leaflet-popup-content b {
+    font-size: 14px;
+  }
+
 }

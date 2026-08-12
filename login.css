@@ -1,214 +1,128 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
+}
 
-body{
+body {
   background-color: #9a2a2a;
-}
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: white;
 }
 
 
+/* ==========================================
+   NAVBAR
+   ========================================== */
 
 .navbar {
-    background-color: #8b0000;
-    color: white;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background-color: #8b0000;
+  color: white;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 18px 32px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 18px 32px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 
 .nav-logo {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 
-    font-family: "Segoe UI", Arial, sans-serif;
-    font-size: 2.3rem;
-    font-weight: 800;
-    font-style: italic;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 2.3rem;
+  font-weight: 800;
+  font-style: italic;
 
-    white-space: nowrap;
+  white-space: nowrap;
 }
-
 
 .nav-links {
-    list-style: none;
+  list-style: none;
 
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
-
-
 
 .nav-links li {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
-
 
 .nav-links a {
-    display: block;
+  display: block;
 
-    color: #dddddd;
-    text-decoration: none;
+  color: #dddddd;
+  text-decoration: none;
 
-    font-family: "Segoe UI", Arial, sans-serif !important;
-    font-size: 1.05rem !important;
-    font-weight: 500 !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-size: 1.05rem !important;
+  font-weight: 500 !important;
 
-    line-height: 1 !important;
+  line-height: 1 !important;
 
-    padding: 12px 14px;
+  padding: 12px 14px;
 
-    border-radius: 8px;
+  border-radius: 8px;
 
-    white-space: nowrap;
+  white-space: nowrap;
 
-    transition:
-        background-color 0.2s ease,
-        color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
-
-
 
 .nav-links a:hover {
-    color: white;
-    background-color: #986868;
+  color: white;
+  background-color: #986868;
 }
-
-
 
 .nav-links a.login {
-    color: white;
-    background-color: #986868;
+  color: white;
+  background-color: #986868;
 }
-
 
 .nav-links .login,
 .nav-links .sign,
 .nav-links .profile {
-    font-family: "Segoe UI", Arial, sans-serif !important;
-    font-size: 1.05rem !important;
-    font-weight: 500 !important;
-}
-.login {
-  font-weight: bold;
-  border-radius: 5rem
-}
-/* Hover and Active Link States */
-.nav-links a:hover,
-.nav-links a.login {
-    color: #ffffff;
-    background-color: #986868;
-   display: flex;
-justify-content: center
-}
-
-.btnforlog {
-  background-color: #8b0000;
-  font-size: 1.5rem}
-  .content {
-    background-color: #8b0000;
-    color: #ffffff;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    font-famil: Trebuchet MS;
-}
-h1{
-  text-align: center;
-    font-family: 'Segoe UI';
-color: #ffffff;
-}
-.content{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  max-width: 600px;
-margin: 40px auto;
-      font-famil: Trebuchet MS;
-}
-body {
-    margin: 0;
-    background-color: #a52a2a;
-    font-family: Arial, sans-serif;
-    color: white;
-}
-
-.content {
-    width: 90%;
-    max-width: 600px;
-    margin: 40px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.content label {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.content input {
-    padding: 14px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-}
-
-.content button {
-    padding: 14px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 8px;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.content button:hover {
-    background-color: #e1b7c9;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-size: 1.05rem !important;
+  font-weight: 500 !important;
 }
 
 
-.state {
- 
-    display: flex;
-justify-content: center
-}
-/* =========================
+/* ==========================================
    LOGIN PAGE
-   ========================= */
+   ========================================== */
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
+
   min-height: calc(100vh - 110px);
+
   padding: 40px 20px;
+
+  box-sizing: border-box;
 }
 
 .login-container {
@@ -224,6 +138,8 @@ main {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 
   text-align: center;
+
+  box-sizing: border-box;
 }
 
 .login-container h1 {
@@ -246,6 +162,11 @@ main {
 
   margin-bottom: 30px;
 }
+
+
+/* ==========================================
+   LOGIN FORM
+   ========================================== */
 
 #loginForm {
   display: flex;
@@ -321,6 +242,11 @@ main {
   font-weight: 600;
 }
 
+
+/* ==========================================
+   SIGNUP LINK
+   ========================================== */
+
 .signup-text {
   margin-top: 22px;
 
@@ -337,4 +263,105 @@ main {
 
 .signup-text a:hover {
   text-decoration: underline;
+}
+
+
+/* ==========================================
+   OPTIONAL BUTTON STYLE
+   ========================================== */
+
+.btnforlog {
+  background-color: #8b0000;
+  font-size: 1.5rem;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-container {
+    padding: 12px 10px;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+  .nav-logo {
+    font-size: 1.8rem;
+
+    margin-bottom: 8px;
+  }
+
+  .nav-links {
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 4px;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem !important;
+
+    padding: 6px 7px !important;
+
+    white-space: nowrap;
+  }
+
+  main {
+    min-height: auto;
+
+    padding: 28px 14px;
+  }
+
+  .login-container {
+    width: 100%;
+
+    max-width: none;
+
+    padding: 30px 20px;
+
+    border-radius: 20px;
+  }
+
+  .login-container h1 {
+    font-size: 2rem;
+  }
+
+  .login-container > p {
+    font-size: 0.95rem;
+  }
+
+  #loginForm input {
+    padding: 14px;
+  }
+
+  #loginForm button {
+    padding: 14px;
+  }
+
 }

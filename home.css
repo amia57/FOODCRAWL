@@ -178,3 +178,44 @@ body{
   font-size: 17.3rem; 
   margin: 0;   
 }
+/* ===== PHONE NAVBAR FIX ===== */
+
+@media screen and (max-width: 768px) {
+
+  .nav-container {
+    padding: 12px 10px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nav-logo {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  .nav-links {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem !important;
+    padding: 6px 7px !important;
+    white-space: nowrap;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
