@@ -11,47 +11,108 @@ body{
     box-sizing: border-box;
 }
 
-/* Navbar Background and Layout */
+
+
 .navbar {
     background-color: #8b0000;
-    color: #ffffff;
+    color: white;
+    width: 100%;
     position: sticky;
     top: 0;
     z-index: 1000;
-    font-famil: Trebuchet MS;
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 18px 32px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    box-sizing: border-box;
 }
 
-/* Logo Styling */
+
 .nav-logo {
-    color: #ffffff;
-    font-size: 2.25rem;
-    font-weight: bold;
+    color: white;
+    text-decoration: none;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 2.3rem;
+    font-weight: 800;
     font-style: italic;
-    font-family: 'Segoe UI'
+
+    white-space: nowrap;
 }
 
-/* Navigation Menu */
+
 .nav-links {
     list-style: none;
+
     display: flex;
-    gap: 1.25rem;
+    align-items: center;
+    gap: 12px;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: "Segoe UI", Arial, sans-serif;
 }
+
+
+
+.nav-links li {
+    margin: 0;
+    padding: 0;
+}
+
+
 .nav-links a {
-    color: #cccccc;
+    display: block;
+
+    color: #dddddd;
     text-decoration: none;
-    font-size: 1.1rem;
-    padding: 0.5rem 0.75rem;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    border-radius: 7px;
+
+    font-family: "Segoe UI", Arial, sans-serif !important;
+    font-size: 1.05rem !important;
+    font-weight: 500 !important;
+
+    line-height: 1 !important;
+
+    padding: 12px 14px;
+
+    border-radius: 8px;
+
+    white-space: nowrap;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+
+.nav-links a:hover {
+    color: white;
+    background-color: #986868;
+}
+
+
+
+.nav-links a.login {
+    color: white;
+    background-color: #986868;
+}
+
+
+.nav-links .login,
+.nav-links .sign,
+.nav-links .profile {
+    font-family: "Segoe UI", Arial, sans-serif !important;
+    font-size: 1.05rem !important;
+    font-weight: 500 !important;
 }
 .login {
   font-weight: bold;
@@ -137,4 +198,143 @@ body {
  
     display: flex;
 justify-content: center
+}
+/* =========================
+   LOGIN PAGE
+   ========================= */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 110px);
+  padding: 40px 20px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 460px;
+
+  background-color: #8b0000;
+
+  padding: 45px 40px;
+
+  border-radius: 24px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+  text-align: center;
+}
+
+.login-container h1 {
+  color: white;
+
+  font-family: "Segoe UI", sans-serif;
+
+  font-size: 2.4rem;
+
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.login-container > p {
+  color: #f2dede;
+
+  font-family: "Segoe UI", sans-serif;
+
+  font-size: 1rem;
+
+  margin-bottom: 30px;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#loginForm input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 15px 16px;
+
+  border: 2px solid transparent;
+
+  border-radius: 12px;
+
+  font-size: 1rem;
+
+  font-family: "Segoe UI", sans-serif;
+
+  outline: none;
+
+  background-color: white;
+
+  transition: 0.2s;
+}
+
+#loginForm input:focus {
+  border-color: #d7a0a0;
+
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.12);
+}
+
+#loginForm button {
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background-color: #a77373;
+
+  color: white;
+
+  font-size: 1.1rem;
+
+  font-weight: bold;
+
+  font-family: "Segoe UI", sans-serif;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+#loginForm button:hover {
+  background-color: #b98787;
+
+  transform: translateY(-1px);
+}
+
+#loginMessage {
+  min-height: 20px;
+
+  margin: 0;
+
+  font-family: "Segoe UI", sans-serif;
+
+  font-weight: 600;
+}
+
+.signup-text {
+  margin-top: 22px;
+
+  color: white;
+}
+
+.signup-text a {
+  color: #ffdede;
+
+  font-weight: bold;
+
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
 }

@@ -38,7 +38,13 @@ signupForm.addEventListener("submit", function (event) {
 
   users.push(newUser);
 
-  localStorage.setItem("users", JSON.stringify(users));
+localStorage.setItem("users", JSON.stringify(users));
+
+// remember which user is logged in
+localStorage.setItem("currentUser", JSON.stringify(newUser));
+
+// take them to their profile
+window.location.href = "profile.html";
 
 
 

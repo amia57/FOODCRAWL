@@ -1,44 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script src="https://cdn.jsdelivr.net/npm/p5@2.3.2/lib/p5.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/p5.sound@0.4.1/dist/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="login.css">
-    <meta charset="utf-8" />
-  </head>
-  <body>
-    <main>
-      
-      <nav class="navbar">
-        <div class="nav-container">
-            <a class="nav-logo">#FOODCRAWL</a>
-            <ul class="nav-links">
-                <li><a href="#" class="active">HOME</a></li>
-                <li><a href="#">MAP</a></li>
-                <li><a href="#">LIST</a></li>
-                <li><a href="#">FAVORITES</a></li>
-                <li><a href="#" class="sign">SIGN UP</a></li> 
-                <li><a href="#" class="login">LOG IN</a></li>
-            </ul>
-        </div>
-    </nav>
-      
-      <br><br>
-      
-  <h1>LOG IN</h1>    
-<div>
-       <form class="content" id="loginForm">
-         <label>Username or Email</label>
-         <input id="loginInput" type="text" placeholder="Insert username/email" required>
-         <label>Password</label>
-         <input id="loginPassword" type="password" placeholder="Insert password" required>
-       <button type="submit">Log In</button>
 
-<p id="loginMessage"></p>
-       </form>
-</div>
-      <p class="state"> Don't have an account?<a href="loginTCB.html">Sign Up</a></p>
-    </main>
-    <script src="login.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Log In | #FOODCRAWL</title>
+
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav class="navbar">
+
+    <div class="nav-container">
+
+      <a class="nav-logo">#FOODCRAWL</a>
+
+      <ul class="nav-links">
+
+        <li>
+          <a href="index.html">
+            HOME
+          </a>
+        </li>
+
+        <li>
+          <a href="map.html">
+            MAP
+          </a>
+        </li>
+
+        <li>
+          <a href="favorites.html">
+            FAVORITES
+          </a>
+        </li>
+ <li>
+          <a href="myplaces.html">
+            MY PLACES
+          </a>
+        </li>
+
+        <li>
+          <a href="signup.html" class="sign">
+            SIGN UP
+          </a>
+        </li>
+
+        <li>
+          <a href="login.html" class="login">
+            LOG IN
+          </a>
+        </li>
+
+        <li>
+          <a href="profile.html" class="profile">
+            PROFILE
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </nav>
+
+
+  <!-- LOGIN SECTION -->
+
+  <main>
+
+    <div class="login-container">
+
+      <h1>Welcome Back</h1>
+
+      <p>
+        Log in to continue exploring Queens food spots.
+      </p>
+
+
+      <form id="loginForm">
+
+        <input
+          type="text"
+          id="username"
+          placeholder="Username or Email"
+          required
+        >
+
+
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          required
+        >
+
+
+        <button type="submit">
+          Log In
+        </button>
+
+
+        <p id="loginMessage"></p>
+
+      </form>
+
+
+      <p class="signup-text">
+
+        Don't have an account?
+
+        <a href="signup.html">
+          Sign Up
+        </a>
+
+      </p>
+
+    </div>
+
+  </main>
+
+
+  <!-- LOGIN JAVASCRIPT -->
+
+  <script src="login.js"></script>
+
+</body>
+
 </html>

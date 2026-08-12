@@ -1,1 +1,356 @@
+html, body {
+  margin: 0;
+  padding: 0;
 
+body{
+  background-color: #9a2a2a;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.navbar {
+    background-color: #8b0000;
+    color: white;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 18px 32px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+
+.nav-logo {
+    color: white;
+    text-decoration: none;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 2.3rem;
+    font-weight: 800;
+    font-style: italic;
+
+    white-space: nowrap;
+}
+
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+
+.nav-links li {
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav-links a {
+    display: block;
+
+    color: #dddddd;
+    text-decoration: none;
+
+    font-family: "Segoe UI", Arial, sans-serif !important;
+    font-size: 1.05rem !important;
+    font-weight: 500 !important;
+
+    line-height: 1 !important;
+
+    padding: 12px 14px;
+
+    border-radius: 8px;
+
+    white-space: nowrap;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+
+.nav-links a:hover {
+    color: white;
+    background-color: #986868;
+}
+
+
+
+.nav-links a.active {
+    color: white;
+    background-color: #986868;
+}
+
+
+.nav-links .login,
+.nav-links .sign,
+.nav-links .profile {
+    font-family: "Segoe UI", Arial, sans-serif !important;
+    font-size: 1.05rem !important;
+    font-weight: 500 !important;
+}
+
+.btnformap {
+  background-color: #8b0000;
+  font-size: 1.75rem
+}
+
+#favvv {
+            background-color: #8b0000;
+            margin-bottom: 20px;
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+.rescate {
+  color:#ffffff;
+     font-family: 'Segoe UI'
+
+}
+
+
+.resname {
+  color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Segoe UI'
+}
+
+.headings {
+  color: white;
+    font-family: 'Segoe UI';
+}
+
+.resdescribe {
+  color: white;
+  font-family: 'Segoe UI';
+  font-size: 1rem;
+
+}
+
+#h1favmajortitle {
+  color:white;
+    font-family: 'Segoe UI';
+      font-size: 3rem;
+}
+
+.resimg {
+  max-width: 50%;
+  height: auto;
+}
+
+.favsubsecs{
+  background-color: #7e0202;
+            margin-bottom: 20px;
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+  /* Favorite Buttons */
+
+.favorite-btn {
+  background-color: #8b0000;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 10px 18px;
+
+  margin-top: 10px;
+  margin-bottom: 25px;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.favorite-btn:hover {
+  background-color: #986868;
+}
+
+.favorite-btn.favorited {
+  background-color: white;
+  color: #8b0000;
+}
+
+
+/* Smooth scrolling */
+
+html {
+  scroll-behavior: smooth;
+}
+  /* Empty favorites message */
+
+.no-favorites {
+  text-align: center;
+  font-size: 1.3rem;
+  color: white;
+  margin: 40px;
+}
+
+
+/* Remove favorite button */
+
+.remove-favorite {
+  background-color: #8b0000;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 10px 18px;
+
+  margin-top: 10px;
+  margin-bottom: 25px;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.remove-favorite:hover {
+  background-color: #986868;
+}
+/* ADD FAVORITE FORM */
+
+.add-favorite {
+  width: 85%;
+  max-width: 900px;
+  margin: 35px auto;
+  padding: 25px;
+
+  background-color: #8b0000;
+
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add-favorite h2 {
+  color: white;
+  font-family: "Segoe UI";
+  margin: 0 0 10px 0;
+}
+
+.add-favorite input,
+.add-favorite textarea {
+  width: 100%;
+  padding: 14px;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.add-favorite textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+#addFavoriteButton {
+  background-color: #986868;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 14px;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+#addFavoriteButton:hover {
+  background-color: #b47d7d;
+}
+
+
+/* USER-ADDED FAVORITES */
+
+#userFavorites {
+  width: 85%;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.user-favorite {
+  background-color: #8b0000;
+  color: white;
+
+  padding: 20px;
+  margin-bottom: 20px;
+
+  border-radius: 12px;
+}
+
+.user-favorite h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.user-favorite h3 a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.user-favorite h3 a:hover {
+  text-decoration: underline;
+}
+
+.user-favorite p {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+
+/* EMPTY MESSAGE */
+
+.no-favorites {
+  text-align: center;
+
+  color: white;
+
+  font-size: 1.2rem;
+
+  margin: 25px auto;
+}

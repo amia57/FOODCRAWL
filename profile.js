@@ -1,93 +1,246 @@
-let profileUsername = document.getElementById("profileUsername");
-
-let profileImage = document.getElementById("profileImage");
-
-let defaultProfile = document.getElementById("defaultProfile");
-
-let pictureInput = document.getElementById("pictureInput");
-
-let changePicture = document.getElementById("changePicture");
-
-let logoutButton = document.getElementById("logoutButton");
+// ==========================================
+// FOODCRAWL PROFILE PAGE
+// ==========================================
 
 
-// Try to get logged-in username
-let loggedInUsername = localStorage.getItem("loggedInUser");
+// ==========================================
+// GET CURRENT USER
+// ==========================================
+
+const currentUser = JSON.parse(
+    localStorage.getItem("currentUser")
+);
 
 
-// If there is a logged-in user, show their username
-if (loggedInUsername) {
+// If nobody is logged in, send them to login
 
-  profileUsername.innerHTML = loggedInUsername;
+if (!currentUser) {
+    window.location.href = "login.html";
+}
+
+
+// ==========================================
+// USERNAME
+// ==========================================
+
+const profileUsername =
+    document.getElementById("profileUsername");
+
+if (profileUsername && currentUser) {
+    profileUsername.textContent =
+        currentUser.username;
+}
+
+
+// ==========================================
+// PROFILE PICTURE ELEMENTS
+// ==========================================
+
+const profileImage =
+    document.getElementById("profileImage");
+
+const defaultProfile =
+    document.getElementById("defaultProfile");
+
+const pictureInput =
+    document.getElementById("pictureInput");
+
+const changePicture =
+    document.getElementById("changePicture");
+
+
+// ==========================================
+// LOAD SAVED PROFILE PICTURE
+// ==========================================
+
+if (
+    currentUser &&
+    currentUser.profilePicture &&
+    profileImage
+) {
+
+    profileImage.src =
+        currentUser.profilePicture;
+
+    profileImage.style.display =
+        "block";
+
+    if (defaultProfile) {
+        defaultProfile.style.display =
+            "none";
+    }
 
 } else {
 
-  profileUsername.innerHTML = "Username";
+    if (profileImage) {
+        profileImage.style.display =
+            "none";
+    }
+
+    if (defaultProfile) {
+        defaultProfile.style.display =
+            "flex";
+    }
 
 }
 
 
-// Load saved profile picture
-let savedPicture = localStorage.getItem("profilePicture");
+// ==========================================
+// CHANGE PROFILE PICTURE BUTTON
+// ==========================================
 
-if (savedPicture) {
+if (
+    changePicture &&
+    pictureInput
+) {
 
-  profileImage.src = savedPicture;
+    changePicture.addEventListener(
+        "click",
+        function () {
 
-  profileImage.style.display = "block";
+            pictureInput.click();
 
-  defaultProfile.style.display = "none";
+        }
+    );
 
 }
 
 
-// Open file picker
-changePicture.addEventListener("click", function() {
+// ==========================================
+// USER PICKS A NEW IMAGE
+// ==========================================
 
-  pictureInput.click();
+if (pictureInput) {
 
-});
+    pictureInput.addEventListener(
+        "change",
+        function () {
 
-
-// Change profile picture
-pictureInput.addEventListener("change", function() {
-
-  let file = pictureInput.files[0];
-
-  if (file) {
-
-    let reader = new FileReader();
-
-    reader.onload = function(event) {
-
-      let image = event.target.result;
-
-      profileImage.src = image;
-
-      profileImage.style.display = "block";
-
-      defaultProfile.style.display = "none";
+            const file =
+                pictureInput.files[0];
 
 
-      // Save picture
-      localStorage.setItem("profilePicture", image);
-
-    };
-
-    reader.readAsDataURL(file);
-
-  }
-
-});
+            if (!file) {
+                return;
+            }
 
 
-// Log out
-logoutButton.addEventListener("click", function() {
+            const reader =
+                new FileReader();
 
-  localStorage.removeItem("loggedInUser");
 
-  profileUsername.innerHTML = "Username";
+            reader.onload =
+                function () {
 
-  alert("Logged out!");
+                    const imageData =
+                        reader.result;
 
-});
+
+                    // Show image
+
+                    if (profileImage) {
+
+                        profileImage.src =
+                            imageData;
+
+                        profileImage.style.display =
+                            "block";
+
+                    }
+
+
+                    // Hide default profile
+
+                    if (defaultProfile) {
+
+                        defaultProfile.style.display =
+                            "none";
+
+                    }
+
+
+                    // Save to current user
+
+                    currentUser.profilePicture =
+                        imageData;
+
+
+                    localStorage.setItem(
+                        "currentUser",
+                        JSON.stringify(currentUser)
+                    );
+
+
+                    // ==================================
+                    // UPDATE USER IN USERS ARRAY
+                    // ==================================
+
+                    const users =
+                        JSON.parse(
+                            localStorage.getItem("users")
+                        ) || [];
+
+
+                    const userIndex =
+                        users.findIndex(
+                            function (user) {
+
+                                return (
+                                    user.username ===
+                                    currentUser.username
+                                );
+
+                            }
+                        );
+
+
+                    if (userIndex !== -1) {
+
+                        users[userIndex].profilePicture =
+                            imageData;
+
+
+                        localStorage.setItem(
+                            "users",
+                            JSON.stringify(users)
+                        );
+
+                    }
+
+                };
+
+
+            reader.readAsDataURL(file);
+
+        }
+    );
+
+}
+
+
+// ==========================================
+// LOG OUT
+// ==========================================
+
+const logoutButton =
+    document.getElementById("logoutButton");
+
+
+if (logoutButton) {
+
+    logoutButton.addEventListener(
+        "click",
+        function () {
+
+            localStorage.removeItem(
+                "currentUser"
+            );
+
+
+            window.location.href =
+                "login.html";
+
+        }
+    );
+
+}

@@ -1,1 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Favorites | #FOODCRAWL</title>
+
+  <link rel="stylesheet" href="favorites.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+       ========================= -->
+
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <a href="index.html" class="nav-logo">
+        #FOODCRAWL
+      </a>
+
+      <ul class="nav-links">
+
+        <li>
+          <a href="index.html">
+            HOME
+          </a>
+        </li>
+
+        <li>
+          <a href="map.html">
+            MAP
+          </a>
+        </li>
+
+        <li>
+          <a href="favorites.html" class="active">
+            FAVORITES
+          </a>
+        </li>
+ <li>
+          <a href="myplaces.html">
+            MY PLACES
+          </a>
+        </li>
+
+        <li>
+          <a href="signup.html">
+            SIGN UP
+          </a>
+        </li>
+
+        <li>
+          <a href="login.html">
+            LOG IN
+          </a>
+        </li>
+
+        <li>
+          <a href="profile.html">
+            PROFILE
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <!-- =========================
+       FAVORITES PAGE
+       ========================= -->
+
+  <main>
+
+    <br><br>
+
+    <button
+      class="btnformap"
+      style="
+        border-radius: 5rem;
+        padding: .5rem 2rem;
+        margin-left: 50px;
+      "
+    >
+      GO EXPLORING!
+    </button>
+
+
+    <section class="section" id="favvv">
+
+      <h1 id="h1favmajortitle">
+        #FOODCRAWL FAVORITES
+      </h1>
+
+
+      <!-- =========================
+           ADD YOUR OWN FAVORITE
+           ========================= -->
+
+      <div class="add-favorite">
+
+        <h2>
+          Add a Favorite Restaurant
+        </h2>
+
+        <input
+          type="text"
+          id="restaurantName"
+          placeholder="Restaurant Name"
+        >
+
+        <input
+          type="text"
+          id="restaurantWebsite"
+          placeholder="Restaurant Website"
+        >
+
+        <textarea
+          id="restaurantDescription"
+          placeholder="Restaurant Description"
+        ></textarea>
+
+        <button id="addFavoriteButton">
+          ADD FAVORITE
+        </button>
+
+      </div>
+
+
+      <!-- CUSTOM FAVORITES APPEAR HERE -->
+
+      <div id="userFavorites"></div>
+
+
+      <!-- =========================
+           PIZZERIAS
+           ========================= -->
+
+      <h2 class="rescate">
+        PIZZERIAS
+      </h2>
+
+      <section class="Pizzerias favsubsecs">
+
+
+        <!-- DARO'S -->
+
+        <h3 class="resname">
+
+          <a href="https://www.darospizza.com/">
+            Daro's Pizza & Chicken
+          </a>
+
+        </h3>
+
+        <a href="https://www.darospizza.com/">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ4J3qWvaa8TM5JuWfOJfLs_FgGObb48y6yQjNhKYCRA&s"
+            alt="Daro's Pizza & Chicken"
+            class="resimg"
+          >
+
+        </a>
+
+        <p class="resdescribe">
+          Not in the mood to cook? Taste the best pizza in
+          Flushing. Flushing is home to the ever-popular
+          Daro's Pizza & Chicken. With great pizzas on the
+          menu, it isn't hard to see why.
+        </p>
+
+
+        <br>
+
+
+        <!-- SINGA'S -->
+
+        <h3 class="resname">
+
+          <a href="https://singaspizzas.com/">
+            Singa’s Famous Pizza
+          </a>
+
+        </h3>
+
+        <a href="https://singaspizzas.com/">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKeSeAqOu_zIj4bjuIHj63G4tA6GExagS-Pnn1MmA8mA&s=10"
+            alt="Singa's Famous Pizza"
+            class="resimg"
+          >
+
+        </a>
+
+        <p class="resdescribe">
+          Singas Famous Pizza was born in New York in 1967.
+          It serves handcrafted pizzas with crispy crusts
+          and recipes rooted in tradition.
+        </p>
+
+
+        <br>
+
+
+        <!-- MR BRUNO'S -->
+
+        <h3 class="resname">
+
+          <a href="https://mrbrunospizzeria.com/">
+            Mr Bruno’s Pizzeria
+          </a>
+
+        </h3>
+
+        <a href="https://mrbrunospizzeria.com/">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV9mXxz4iaBOnGo_P8hDlLi9soi1Oef7XNoWiSXYjXYg&s=10"
+            alt="Mr Bruno's Pizzeria"
+            class="resimg"
+          >
+
+        </a>
+
+        <p class="resdescribe">
+          Enjoy authentic NYC-style pizza, pasta, subs,
+          and more at Mr. Bruno's Pizzeria.
+        </p>
+
+
+        <br>
+
+
+        <!-- DELICIAS -->
+
+        <h3 class="resname">
+
+          <a href="https://www.deliciaspizzachicken.com/">
+            Delicias Pizza and Fried Chicken
+          </a>
+
+        </h3>
+
+        <a href="https://www.deliciaspizzachicken.com/">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqP8UqRoEJZEtEzP8cMQlZD-vwROxIgOh56VuFi2pHBQ&s"
+            alt="Delicias Pizza and Fried Chicken"
+            class="resimg"
+          >
+
+        </a>
+
+        <p class="resdescribe">
+          Delicias Pizza and Fried Chicken is a local
+          Flushing spot serving pizza, chicken,
+          fries, and other favorites.
+        </p>
+
+
+        <br>
+
+
+        <!-- JAX -->
+
+        <h3 class="resname">
+
+          <a href="https://www.jaxpizzajoint.com/">
+            Jax Pizza Joint
+          </a>
+
+        </h3>
+
+        <a href="https://www.jaxpizzajoint.com/">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRosRzZAqMvvThsmVL63jk7AFkyU1UCXJ4D-2QWLiNrmA&s"
+            alt="Jax Pizza Joint"
+            class="resimg"
+          >
+
+        </a>
+
+        <p class="resdescribe">
+          Jax Pizza Joint brings the classic NYC slice-shop
+          experience to Queens with crispy pizza,
+          sandwiches, desserts, and more.
+        </p>
+
+      </section>
+
+
+      <!-- =========================
+           CAFES
+           ========================= -->
+
+      <h2 class="rescate">
+        CAFES
+      </h2>
+
+      <section class="Cafes favsubsecs">
+
+
+        <!-- CAFE COCO -->
+
+        <h3 class="resname">
+
+          <a href="https://www.cafe-coco.com/about">
+            Cafe Coco
+          </a>
+
+        </h3>
+
+        <a href="https://www.cafe-coco.com/about">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtS2SApwHkxuu9YUb70uLzpp8jO1rfi8p9Rjj6qsyaPg&s"
+            alt="Cafe Coco"
+            class="resimg"
+          >
+
+        </a>
+
+        <p class="resdescribe">
+          Café Coco is a neighborhood café in Long Island
+          City serving artisan pastries, breakfast,
+          lunch, and specialty coffee.
+        </p>
+
+
+        <br>
+
+
+        <!-- MARTHA'S -->
+
+        <h3 class="resname">
+
+          <a href="https://marthascountrybakery.com/">
+            Martha's Country Bakery
+          </a>
+
+        </h3>
+
+        <a href="https://marthascountrybakery.com/">
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq4yHWED3tGtQhbQYSJkn8qRAPK78I4ANSDOPihKZbEg&s=10"
+            alt="Martha's Country Bakery"
+            class="resimg"
+          >
+
+        </a>
+
+        <p class="resdescribe">
+          Martha's Country Bakery serves cakes, pies,
+          pastries, coffee, and other desserts in a
+          cozy neighborhood bakery atmosphere.
+        </p>
+
+      </section>
+
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       JAVASCRIPT
+       ========================= -->
+
+  <script src="favorites.js"></script>
+
+</body>
+
+</html>
