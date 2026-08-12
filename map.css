@@ -1,0 +1,156 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #9a2a2a;
+  box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #8b0000;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Segoe UI';
+}
+
+.nav-links {
+    margin-left: auto;
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    font-family: sans
+}
+
+.nav-links a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 0.5rem 0.75rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 7px;
+}
+
+.login {
+  font-weight: bold;
+  border-radius: 5rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffffff;
+    background-color: #986868;
+}
+/* =========================
+   FOODCRAWL MAP FILTER
+   ========================= */
+
+.leaflet-control-layers.leaflet-control {
+    background-color: #8b0000 !important;
+    border: none !important;
+    border-radius: 14px !important;
+
+    padding: 12px 14px !important;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.28) !important;
+
+    font-family: "Segoe UI", sans-serif !important;
+
+    max-width: 270px;
+}
+
+
+/* inside of filter */
+.leaflet-control-layers-expanded {
+    background-color: #8b0000 !important;
+    color: white !important;
+
+    padding: 10px !important;
+}
+
+
+/* every food category */
+.leaflet-control-layers-overlays label {
+    display: block;
+
+    color: white !important;
+
+    padding: 7px 9px;
+    margin: 2px 0;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* hover */
+.leaflet-control-layers-overlays label:hover {
+    background-color: #986868;
+}
+
+
+/* THE ACTUAL TEXT */
+.leaflet-control-layers-overlays label span {
+    color: white !important;
+}
+
+
+/* checkbox */
+.leaflet-control-layers-overlays input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+
+    margin-right: 8px;
+
+    accent-color: #ffb3b3;
+
+    cursor: pointer;
+}
+
+
+/* little divider Leaflet sometimes adds */
+.leaflet-control-layers-separator {
+    border-top: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+
+/* scroll if needed */
+.leaflet-control-layers-list {
+    max-height: 360px;
+    overflow-y: auto;
+}
+
+
+/* scrollbar */
+.leaflet-control-layers-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.leaflet-control-layers-list::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+}
