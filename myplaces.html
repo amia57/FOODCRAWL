@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Places | #FOODCRAWL</title>
+
+  <link rel="stylesheet" href="myplaces.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <a href="index.html" class="nav-logo">
+        #FOODCRAWL
+      </a>
+
+      <ul class="nav-links">
+
+        <li><a href="index.html">HOME</a></li>
+
+        <li><a href="map.html">MAP</a></li>
+
+        <li><a href="favorites.html">FAVORITES</a></li>
+
+        <li><a href="signup.html">SIGN UP</a></li>
+
+        <li><a href="login.html">LOG IN</a></li>
+
+        <li>
+          <a href="myplaces.html" class="active">
+            MY PLACES
+          </a>
+        </li>
+
+        <li><a href="profile.html">PROFILE</a></li>
+
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <!-- PAGE -->
+
+  <main class="myplaces-page">
+
+    <section class="myplaces-card">
+
+      <h1>MY PLACES</h1>
+
+      <p class="subtitle">
+        Add food spots that aren't on #FOODCRAWL yet.
+      </p>
+
+
+      <!-- ADD PLACE FORM -->
+
+      <form id="placeForm">
+
+        <label for="placeName">
+          Restaurant Name
+        </label>
+
+        <input
+          type="text"
+          id="placeName"
+          placeholder="Restaurant name"
+          required
+        >
+
+
+        <label for="placeAddress">
+          Address
+        </label>
+
+        <input
+          type="text"
+          id="placeAddress"
+          placeholder="Restaurant address"
+        >
+
+
+        <label for="placeCategory">
+          Category
+        </label>
+
+        <select id="placeCategory">
+
+          <option value="Pizza">
+            🍕 Pizza
+          </option>
+
+          <option value="Cafes">
+            ☕ Cafes
+          </option>
+
+          <option value="Delis & Bagels">
+            🥪 Delis & Bagels
+          </option>
+
+          <option value="Desserts & Bakeries">
+            🍰 Desserts & Bakeries
+          </option>
+
+          <option value="East & Southeast Asian">
+            🥟 East & Southeast Asian
+          </option>
+
+          <option value="South Asian">
+            🍛 South Asian
+          </option>
+
+          <option value="Latin American">
+            🌮 Latin American
+          </option>
+
+          <option value="American & Brunch">
+            🍔 American & Brunch
+          </option>
+
+          <option value="Other Restaurants">
+            🍽️ Other
+          </option>
+
+        </select>
+
+
+        <label for="placeWebsite">
+          Website
+        </label>
+
+        <input
+          type="text"
+          id="placeWebsite"
+          placeholder="Optional website"
+        >
+
+
+        <label for="placeDescription">
+          Description
+        </label>
+
+        <textarea
+          id="placeDescription"
+          placeholder="What do you like about this place?"
+        ></textarea>
+
+
+        <button type="submit">
+          ADD PLACE
+        </button>
+
+      </form>
+
+    </section>
+
+
+    <!-- SAVED PLACES -->
+
+    <section class="saved-section">
+
+      <h2>Your Added Places</h2>
+
+      <p id="emptyPlaces">
+        You haven't added any places yet.
+      </p>
+
+      <div id="placesList"></div>
+
+    </section>
+
+  </main>
+
+
+  <script src="myplaces.js"></script>
+
+</body>
+
+</html>
